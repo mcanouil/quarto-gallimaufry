@@ -1,0 +1,21 @@
+---
+title: "Centre Images"
+format: typst
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    center-images: true
+---
+
+## Default alignment (centre)
+
+A standalone image is wrapped in `#align(center)[...]` by default.
+
+![A placeholder image](https://placehold.co/400x200)
+
+## Custom alignment
+
+An image with `img-align="right"` is wrapped in `#align(right)[...]`.
+
+![Right-aligned image](https://placehold.co/400x200){img-align="right"}

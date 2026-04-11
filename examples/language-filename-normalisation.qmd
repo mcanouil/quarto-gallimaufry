@@ -1,0 +1,32 @@
+---
+title: "Language Filename Normalisation"
+format: html
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    language-filename-normalisation: true
+---
+
+## Unknown language classes
+
+Code blocks with unrecognised language classes are retagged to `default`.
+The original class is promoted to a `filename` attribute.
+
+```foo
+This block's language "foo" is unknown to Pandoc.
+It will render as "default" with filename="foo".
+```
+
+```my-config
+key = "value"
+another_key = 42
+```
+
+## Known language classes
+
+A block with a recognised language is left unchanged.
+
+```python
+print("This stays as Python.")
+```

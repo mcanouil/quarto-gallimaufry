@@ -1,0 +1,28 @@
+---
+title: "Typst Math Alt"
+format: typst
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    typst-math-alt: true
+---
+
+## Accessible maths with alt text
+
+This filter emits `#math.equation(alt: ...)` for maths elements wrapped in a Span or Div carrying an `alt` attribute.
+This provides accessible alt text for equations in Typst output.
+
+### Inline maths
+
+The equation [$ E = mc^2 $]{alt="Energy equals mass times the speed of light squared"} is fundamental to physics.
+
+### Display maths
+
+::: {alt="The integral of f of x from zero to one"}
+
+$$
+\int_0^1 f(x)\,dx
+$$
+
+:::

@@ -1,0 +1,19 @@
+---
+title: "Suppress Bibliography"
+format: typst
+bibliography: references.bib
+suppress-bibliography: true
+citeproc: false
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    suppress-bibliography: true
+---
+
+## Hidden bibliography
+
+This document uses citations but suppresses the bibliography block in Typst output.
+The `#show bibliography: none` rule is injected, so citation references remain functional while the bibliography section is hidden.
+
+Knuth's TeXbook [@knuth1984] and Lamport's LaTeX guide [@lamport1994] are classic references.

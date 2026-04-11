@@ -1,0 +1,19 @@
+---
+title: "Count Cite"
+format: html
+bibliography: references.bib
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    count-cite: true
+---
+
+## Citation counting
+
+This filter counts how many times each citation key appears and logs the totals to the Quarto console.
+Check the terminal output after rendering for a `[gallimaufry] count-cite:` log line.
+
+Knuth wrote The TeXbook [@knuth1984], while Lamport created LaTeX [@lamport1994].
+Both works are foundational to the TeX ecosystem [@knuth1984; @lamport1994].
+Turing's seminal paper [@turing1936] predates them both.

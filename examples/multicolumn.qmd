@@ -1,0 +1,37 @@
+---
+title: "Multicolumn"
+format:
+  typst:
+    columns: 2
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    multicolumn: true
+---
+
+## Column-spanning tables
+
+In a multi-column Typst layout, tables with the `.multicolumn` class span all columns.
+The filter injects `scope: "parent"` and `placement` into the Typst `#figure()` call.
+
+Some filler text to demonstrate the two-column layout before the table appears.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+| Fruit  | Count |
+| ------ | ----- |
+| Apples | 5     |
+| Pears  | 3     |
+| Plums  | 7     |
+
+: A regular table {#tbl-regular}
+
+| Language | Year |
+| -------- | ---- |
+| C        | 1972 |
+| Python   | 1991 |
+| Rust     | 2010 |
+
+: A column-spanning table {#tbl-wide .multicolumn}
+
+See @tbl-regular and @tbl-wide.

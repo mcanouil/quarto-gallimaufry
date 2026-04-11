@@ -1,0 +1,25 @@
+---
+title: "Subfigure References"
+format: html
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    subfig-ref: true
+---
+
+## Parent figure with subfigures
+
+The filter strips the parent prefix from subfigure cross-references inside parent figures.
+Instead of "Figure 1 (a)", the reference reads "(a)".
+
+::: {#fig-animals layout-ncol=2}
+
+![A cat](https://placehold.co/300x200?text=Cat){#fig-cat}
+
+![A dog](https://placehold.co/300x200?text=Dog){#fig-dog}
+
+Two animals.
+:::
+
+See @fig-animals for both animals, @fig-cat for the cat, and @fig-dog for the dog.

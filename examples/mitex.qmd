@@ -1,0 +1,25 @@
+---
+title: "MiTeX"
+format: typst
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    mitex: true
+---
+
+## LaTeX maths to Typst via MiTeX
+
+This filter converts LaTeX maths to Typst using the MiTeX package.
+Inline maths becomes `#mi(...)` and display maths becomes `#mimath(...)`.
+The `#import "@preview/mitex:0.2.6": *` statement is injected once in the header.
+
+### Inline maths
+
+The famous equation $E = mc^2$ is converted to a MiTeX inline call.
+
+### Display maths
+
+$$
+\int_0^1 f(x)\,dx = F(1) - F(0)
+$$

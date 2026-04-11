@@ -1,0 +1,52 @@
+# _schema.yml for "gallimaufry" filter extension
+# Describes options for IDE tooling and runtime validation.
+#
+# Each module is opt-in. Enable a module by setting its flag to true under:
+#   extensions:
+#     gallimaufry:
+#       <module-name>: true
+options:
+  center-images:
+    type: boolean
+    default: false
+    description: "Align standalone images in Typst output using `img-align`."
+  code-fold-latex:
+    type: boolean
+    default: false
+    description: "Drop code blocks tagged with `code-fold` when rendering to LaTeX."
+  count-cite:
+    type: boolean
+    default: false
+    description: "Log per-id citation counts to the Quarto console."
+  image-display-size:
+    type: boolean
+    default: false
+    description: "Move width/height attributes from a cell div onto the nested image."
+  language-filename-normalisation:
+    type: boolean
+    default: false
+    description: "Normalise unknown code block languages to `default`, promoting the original language to a `filename` attribute."
+  mitex:
+    type: boolean
+    default: false
+    description: "Convert LaTeX maths to Typst via the MiTeX package."
+  multicolumn:
+    type: boolean
+    default: false
+    description: "Span tables across columns in Typst via `.multicolumn[-top/-bottom]` classes."
+  repeat-heading:
+    type: boolean
+    default: false
+    description: "Repeat heading chains on `---` slide separators in reveal.js presentations."
+  subfig-ref:
+    type: boolean
+    default: false
+    description: "Strip parent prefix from subfigure cross-references inside parent figures (HTML and Typst)."
+  suppress-bibliography:
+    type: boolean
+    default: false
+    description: "Hide the bibliography block in Typst output while keeping citation references functional."
+  typst-math-alt:
+    type: boolean
+    default: false
+    description: "Emit `#math.equation(alt: ...)` for Math wrapped in a Span or Div carrying an `alt` attribute."

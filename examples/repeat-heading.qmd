@@ -1,0 +1,40 @@
+---
+title: "Repeat Heading"
+format: revealjs
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    repeat-heading: true
+---
+
+## Introduction
+
+This presentation demonstrates the repeat-heading filter.
+
+## Section A
+
+### Topic 1
+
+Content for topic 1.
+
+---
+
+Content on a continuation slide.
+The heading chain ("Section A" > "Topic 1") is repeated automatically.
+
+---
+
+### Topic 2
+
+Only "Section A" is repeated here because "Topic 2" provides its own heading.
+
+## Section B
+
+### Topic 3
+
+Another section with a topic.
+
+---
+
+A continuation slide under Section B > Topic 3.

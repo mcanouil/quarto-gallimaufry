@@ -1,0 +1,22 @@
+---
+title: "Image Display Size"
+format: html
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    image-display-size: true
+---
+
+## Width/height migration
+
+This filter moves `width`/`height` attributes from a `.cell` div onto the nested image inside `.cell-output-display`.
+The effect is visible in computational output where Quarto wraps figures in cell divs.
+
+::: {.cell width="50%"}
+::: {.cell-output-display}
+
+![A resized image](https://placehold.co/600x300)
+
+:::
+:::

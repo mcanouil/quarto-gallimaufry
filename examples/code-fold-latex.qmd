@@ -1,0 +1,28 @@
+---
+title: "Code Fold LaTeX"
+format: pdf
+filters:
+  - gallimaufry
+extensions:
+  gallimaufry:
+    code-fold-latex: true
+---
+
+## Code fold removal
+
+The code block below carries a `code-fold` attribute.
+In HTML output it would render as a collapsible block, but LaTeX has no equivalent UI, so the filter removes it entirely.
+
+```{.python code-fold="true"}
+import numpy as np
+x = np.linspace(0, 2 * np.pi, 100)
+print(x)
+```
+
+## Regular code block
+
+This block has no `code-fold` attribute and is preserved in all formats.
+
+```python
+print("Hello, world!")
+```
