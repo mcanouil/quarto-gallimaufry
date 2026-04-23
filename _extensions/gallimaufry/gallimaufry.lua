@@ -3,7 +3,6 @@
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil
---- @version 0.0.0
 --- @brief Toggleable bundle of Pandoc AST filters.
 --- @description Loads a per-document subset of filter modules based on
 ---   `extensions.gallimaufry.*` flags in the document metadata. All
