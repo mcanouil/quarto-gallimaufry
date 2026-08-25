@@ -1,5 +1,5 @@
 --- Multicolumn - Filter Module
---- @module multicolumn
+--- @module "multicolumn"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

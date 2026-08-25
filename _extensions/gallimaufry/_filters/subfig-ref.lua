@@ -1,5 +1,5 @@
 --- Subfig Ref - Filter Module
---- @module subfig-ref
+--- @module "subfig-ref"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

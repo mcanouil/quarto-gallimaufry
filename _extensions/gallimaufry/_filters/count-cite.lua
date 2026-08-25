@@ -1,5 +1,5 @@
 --- Count Cite - Filter Module
---- @module count-cite
+--- @module "count-cite"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

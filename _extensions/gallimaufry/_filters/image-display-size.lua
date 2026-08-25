@@ -1,5 +1,5 @@
 --- Image Display Size - Filter Module
---- @module image-display-size
+--- @module "image-display-size"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

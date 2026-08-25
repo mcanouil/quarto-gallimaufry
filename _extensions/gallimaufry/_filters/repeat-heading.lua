@@ -1,5 +1,5 @@
 --- Repeat Heading - Filter Module
---- @module repeat-heading
+--- @module "repeat-heading"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

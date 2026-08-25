@@ -1,5 +1,5 @@
 --- Language Filename Normalisation - Filter Module
---- @module language-filename-normalisation
+--- @module "language-filename-normalisation"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

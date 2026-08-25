@@ -1,5 +1,5 @@
 --- Typst Math Alt - Filter Module
---- @module typst-math-alt
+--- @module "typst-math-alt"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

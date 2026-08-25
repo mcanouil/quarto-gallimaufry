@@ -1,5 +1,5 @@
 --- Centre Images - Filter Module
---- @module center-images
+--- @module "center-images"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

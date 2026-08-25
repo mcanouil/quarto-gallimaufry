@@ -1,5 +1,5 @@
 --- Suppress Bibliography - Filter Module
---- @module suppress-bibliography
+--- @module "suppress-bibliography"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

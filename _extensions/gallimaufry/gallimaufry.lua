@@ -1,5 +1,5 @@
 --- Gallimaufry - Filter
---- @module gallimaufry
+--- @module "gallimaufry"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

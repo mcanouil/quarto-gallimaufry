@@ -1,5 +1,5 @@
 --- Code Fold LaTeX - Filter Module
---- @module code-fold-latex
+--- @module "code-fold-latex"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil

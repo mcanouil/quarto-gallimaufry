@@ -1,5 +1,5 @@
 --- MiTeX - Filter Module
---- @module mitex
+--- @module "mitex"
 --- @license MIT
 --- @copyright 2026 Mickaël Canouil
 --- @author Mickaël Canouil
