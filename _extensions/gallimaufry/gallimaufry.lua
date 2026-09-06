@@ -14,6 +14,21 @@ local EXTENSION_NAME = 'gallimaufry'
 
 local log = require(quarto.utils.resolve_path('_vendor/quarto-lua-modules/logging.lua'):gsub('%.lua$', ''))
 local meta_mod = require(quarto.utils.resolve_path('_vendor/quarto-lua-modules/metadata.lua'):gsub('%.lua$', ''))
+local schema = require(quarto.utils.resolve_path('_vendor/quarto-wizard/schema.lua'):gsub('%.lua$', ''))
+local check = require(quarto.utils.resolve_path('_vendor/quarto-lua-modules/schema-check.lua'):gsub('%.lua$', ''))
+
+--- The schema check, built once and reused by the whole render. It reads
+--- `_schema.yml` on the way in and checks the document configuration once.
+---
+--- The validator is injected rather than required by the check module, so the
+--- two vendored sources stay independent of where the other was placed.
+---
+--- The extension contributes a filter and no shortcode, so the check runs from
+--- the `Meta` handler. There is nowhere else it could run.
+---
+--- A schema that cannot be read is reported by the module as an error and the
+--- render carries on: a configuration file must not stop a document.
+local checker = check.new(schema, EXTENSION_NAME)
 
 --- Ordered list of bundled module names.
 local MODULES = {
@@ -93,6 +108,7 @@ end
 --- @param meta pandoc.Meta
 --- @return nil
 local function capture_config(meta)
+  checker:options(meta)
   local cfg = meta_mod.get_extension_config(meta, EXTENSION_NAME) or {}
   for key, _ in pairs(cfg) do
     if not MODULE_SET[key] then
