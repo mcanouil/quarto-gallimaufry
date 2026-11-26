@@ -16,16 +16,16 @@
 
 local M = {}
 
+local engine = require(quarto.utils.resolve_path('_vendor/quarto-lua-modules/engine.lua'):gsub('%.lua$', ''))
+
 --- Detect the pre-shift heading level that corresponds to the slide level.
 --- With `shift-heading-level-by`, Pandoc shifts heading levels AFTER filters,
 --- so the AST still has the original (pre-shift) levels.
 --- @param blocks pandoc.Blocks
+--- @param meta pandoc.Meta The document metadata, for the slide level in Quarto 2
 --- @return integer
-function M.detect_slide_level(blocks)
-  local slide_level = 2
-  if PANDOC_WRITER_OPTIONS and PANDOC_WRITER_OPTIONS.slide_level then
-    slide_level = PANDOC_WRITER_OPTIONS.slide_level
-  end
+function M.detect_slide_level(blocks, meta)
+  local slide_level = engine.slide_level(meta)
   local min_level = nil
   for _, block in ipairs(blocks) do
     if block.t == 'Header' then
@@ -47,7 +47,7 @@ end
 --- @param doc pandoc.Pandoc
 --- @return pandoc.Pandoc
 function M.process_pandoc(doc)
-  local slide_level = M.detect_slide_level(doc.blocks)
+  local slide_level = M.detect_slide_level(doc.blocks, doc.meta)
   local chain = {}
   local at_slide_start = false
   local new_blocks = pandoc.Blocks({})

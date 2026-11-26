@@ -30,7 +30,7 @@ function M.process_div(div)
 
   for i, el in ipairs(div.content) do
     if el.t == 'Div' and el.classes:includes('cell-output-display') then
-      div.content[i] = pandoc.walk_block(el, {
+      div.content[i] = el:walk({
         Image = function(img)
           img.attributes['width'] = width
           img.attributes['height'] = height
