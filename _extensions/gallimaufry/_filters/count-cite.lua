@@ -10,7 +10,7 @@
 
 local M = {}
 
-local log = require(quarto.utils.resolve_path('_modules/logging.lua'):gsub('%.lua$', ''))
+local log = require(quarto.utils.resolve_path('_vendor/quarto-lua-modules/logging.lua'):gsub('%.lua$', ''))
 
 local EXTENSION_NAME = 'gallimaufry'
 
