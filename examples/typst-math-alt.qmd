@@ -15,7 +15,7 @@ This provides accessible alt text for equations in Typst output.
 
 ### Inline maths
 
-The equation [$ E = mc^2 $]{alt="Energy equals mass times the speed of light squared"} is fundamental to physics.
+The equation [$E = mc^2$]{alt="Energy equals mass times the speed of light squared"} is fundamental to physics.
 
 ### Display maths
 
